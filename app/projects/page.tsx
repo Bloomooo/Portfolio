@@ -1,0 +1,70 @@
+"use client";
+import { Github, Mail, Twitter } from "lucide-react";
+import Link from "next/link";
+import { Navigation } from "../components/nav";
+import { Card } from "../components/card";
+import { useEffect, useState } from "react";
+
+export interface Project {
+  description?: string;
+  image?: string;
+  lien: string;
+  name?: string;
+}
+
+export default function Example() {
+  const [listeProjet, setListeProjet] = useState<Project[]>([]);
+  useEffect(() => {
+    const fetchProjects = async () => {
+      const response = await fetch("/api/projects");
+      const data = await response.json();
+      console.log(data);
+      if (Array.isArray(data)) {
+        setListeProjet(data);
+      } else {
+        console.error("Received data is not an array:", data);
+        setListeProjet([]);
+      }
+    };
+
+    fetchProjects();
+  }, []);
+
+  return (
+    <div className=" bg-gradient-to-tl from-zinc-900/0 via-zinc-900 to-zinc-900/0">
+      <Navigation />
+      <div className="container flex items-center justify-center min-h-screen px-4 mx-auto">
+        <div className="grid w-full grid-cols-1 gap-8 mx-auto mt-32 sm:mt-0 sm:grid-cols-3 lg:gap-16">
+          {listeProjet?.map((s, index) => (
+            <Card key={index}>
+              <Link href={s.lien || "#"} passHref legacyBehavior>
+                <a
+                  target="_blank"
+                  className="p-4 relative flex flex-col items-center gap-4 duration-700 group md:gap-8 md:py-24 lg:pb-48 md:p-16"
+                >
+                  <span
+                    className="absolute w-px h-2/3 bg-gradient-to-b from-zinc-500 via-zinc-500/50 to-transparent"
+                    aria-hidden="true"
+                  />
+                  <span className="relative z-10 flex items-center justify-center w-12 h-12 text-sm duration-1000 border rounded-full text-zinc-200 group-hover:text-white group-hover:bg-zinc-900 border-zinc-500 bg-zinc-900 group-hover:border-zinc-200 drop-shadow-orange">
+                    {s.image === "Github" && <Github />}
+                    {s.image === "Twitter" && <Twitter />}
+                    {s.image === "Mail" && <Mail />}
+                  </span>
+                  <div className="z-10 flex flex-col items-center">
+                    <span className="lg:text-xl font-medium duration-150 xl:text-3xl text-zinc-200 group-hover:text-white font-display">
+                      {s.name}
+                    </span>
+                    <span className="mt-4 text-sm text-center duration-1000 text-zinc-400 group-hover:text-zinc-200">
+                      {s.description}
+                    </span>
+                  </div>
+                </a>
+              </Link>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
