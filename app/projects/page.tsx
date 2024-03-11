@@ -123,7 +123,7 @@ export default function Projet() {
       </div>
       <button
         onClick={handleNextClick}
-        className="absolute right-0 z-10 flex items-center justify-center h-12 w-12 bg-gradient-to-l bg-black text-white rounded-full shadow-lg cursor-pointer transform -translate-y-1/2 top-1/2 transition-all duration-300 hover:bg-gradient-to-l hover:from-white hover:to-white hover:scale-110 hover:text-black"
+        className="absolute right-0 z-10 flex items-center justify-center h-12 w-12 bg-gradient-to-r bg-black text-white rounded-full shadow-lg cursor-pointer transform -translate-y-1/2 top-1/2 transition-all duration-300 hover:bg-gradient-to-r hover:from-white hover:to-white hover:scale-110 hover:text-black"
         aria-label="Next Project"
       >
         <NextIcon />
