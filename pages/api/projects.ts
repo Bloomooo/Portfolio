@@ -11,7 +11,6 @@ export default async function projects(req: NextApiRequest, res: NextApiResponse
       if (!serializedProjects) {
         return res.status(404).json({ error: 'Projects not found' });
       }
-      console.log(serializedProjects);
       
       const projectsData: Project[] = typeof serializedProjects === 'string' ? JSON.parse(serializedProjects) : serializedProjects;
       
