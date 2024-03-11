@@ -5,7 +5,7 @@ import { Card } from "../components/card";
 import { useEffect, useState } from "react";
 import { Competence } from "../interface/competence";
 
-export default function Projet() {
+export default function Competences() {
   const [listeCompetence, setListeCompetence] = useState<Competence[]>([]);
   useEffect(() => {
     const fetchProjects = async () => {
