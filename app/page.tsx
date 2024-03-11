@@ -1,12 +1,10 @@
 import Link from "next/link";
 import React from "react";
 import Particles from "./components/particles";
-import Project from "./projects/page";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 
 const navigation = [
   { name: "Projects", href: "/projects" },
+  { name: "Competence", href: "/competence" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -39,9 +37,7 @@ export default function Home() {
       <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
       <div className="my-16 text-center animate-fade-in">
         <h2 className="text-sm text-zinc-500 ">
-          <a href="#projects" className="text-zinc-500 hover:text-zinc-300">
-            <FontAwesomeIcon icon={faArrowDown} />
-          </a>
+          <a href="#projects" className="text-zinc-500 hover:text-zinc-300"></a>
         </h2>
       </div>
     </div>

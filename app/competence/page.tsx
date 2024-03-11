@@ -3,19 +3,19 @@
 import Link from "next/link";
 import { Card } from "../components/card";
 import { useEffect, useState } from "react";
-import { Project } from "../interface/projets";
+import { Competence } from "../interface/competence";
 
 export default function Projet() {
-  const [listeProjet, setListeProjet] = useState<Project[]>([]);
+  const [listeCompetence, setListeCompetence] = useState<Competence[]>([]);
   useEffect(() => {
     const fetchProjects = async () => {
-      const response = await fetch("/api/projects");
+      const response = await fetch("/api/competence");
       const data = await response.json();
       if (Array.isArray(data)) {
-        setListeProjet(data);
+        setListeCompetence(data);
       } else {
         console.error("Received data is not an array:", data);
-        setListeProjet([]);
+        setListeCompetence([]);
       }
     };
 
@@ -26,9 +26,9 @@ export default function Projet() {
     <div>
       <div className="container flex items-center justify-center min-h-screen px-4 mx-auto">
         <div className="grid w-full grid-cols-1 gap-8 mx-auto mt-32 sm:mt-0 sm:grid-cols-3 lg:gap-16">
-          {listeProjet?.map((s, index) => (
+          {listeCompetence?.map((s, index) => (
             <Card key={index}>
-              <Link href={s.lien || "#"} passHref legacyBehavior>
+              <Link href={s.url || "#"} passHref legacyBehavior>
                 <a
                   target="_blank"
                   className="p-4 relative flex flex-col items-center gap-4 duration-700 group md:gap-8 md:py-24 lg:pb-48 md:p-16"
@@ -48,7 +48,10 @@ export default function Projet() {
                       {s.name}
                     </span>
                     <span className="mt-4 text-sm text-center duration-1000 text-zinc-400 group-hover:text-zinc-200">
-                      {s.description}
+                      {s.maitrise}
+                    </span>
+                    <span className="mt-4 text-sm text-center duration-1000 text-zinc-400 group-hover:text-zinc-200">
+                      {s.type}
                     </span>
                   </div>
                 </a>
