@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Card } from "../components/card";
 import { useEffect, useState } from "react";
 import { Project } from "../interface/projets";
-
+import { Langage } from "../interface/langage";
 export default function Projet() {
   const [listeProjet, setListeProjet] = useState<Project[]>([]);
   const [displayedProjects, setDisplayedProjects] = useState<Project[]>([]);
@@ -13,6 +13,8 @@ export default function Projet() {
     const fetchProjects = async () => {
       const response = await fetch("/api/projects");
       const data = await response.json();
+      console.log(data);
+
       if (Array.isArray(data)) {
         setListeProjet(data);
         setDisplayedProjects(data.slice(0, 3));
@@ -115,6 +117,25 @@ export default function Projet() {
                   <span className="mt-4 text-sm text-center duration-1000 text-zinc-400 group-hover:text-zinc-200">
                     {project.description}
                   </span>
+                </div>
+                <div className="flex flex-wrap items-center justify-center gap-2 mt-4">
+                  {project.langage.map((langage: Langage, index: number) => (
+                    <div
+                      key={index}
+                      className="relative group"
+                      style={{ margin: "1vh" }}
+                    >
+                      <img
+                        src={langage.image}
+                        alt={langage.name}
+                        className="md:w-12 md:h-12 shadow-lg hover:shadow-2xl transition-transform duration-300 ease-in-out hover:scale-110 hover:rotate-2"
+                        style={{
+                          transition:
+                            "box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out",
+                        }}
+                      />
+                    </div>
+                  ))}
                 </div>
               </a>
             </Link>
