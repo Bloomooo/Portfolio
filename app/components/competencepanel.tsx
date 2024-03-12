@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import { CompetencePanelProps } from "../interface/panelprops";
 import { CardsGrid } from "./cardgrid";
 
