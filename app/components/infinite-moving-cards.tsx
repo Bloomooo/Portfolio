@@ -18,8 +18,10 @@ export const InfiniteMovingCards: React.FC<InfiniteMovingCardsProps> = ({
     scroller.innerHTML = "";
     duplicatedItems.forEach((item) => {
       const li = document.createElement("li");
+
       li.innerHTML = `<blockquote><img src="${item.quote}" alt="${item.name}" /></blockquote>`;
       const img = li.querySelector("img");
+
       if (img) {
         img.style.maxWidth = "30vh";
         img.style.maxHeight = "10vh";

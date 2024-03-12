@@ -13,7 +13,6 @@ export default function Projet() {
     const fetchProjects = async () => {
       const response = await fetch("/api/projects");
       const data = await response.json();
-      console.log(data);
 
       if (Array.isArray(data)) {
         setListeProjet(data);

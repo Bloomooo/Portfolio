@@ -4,6 +4,7 @@ import Particles from "./components/particles";
 import Projet from "./projects/page";
 import Competences from "./competence/page";
 import Contact from "./contact/page";
+
 const navigation = [
   { name: "Projects", href: "/projects" },
   { name: "Competence", href: "/competence" },

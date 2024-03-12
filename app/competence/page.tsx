@@ -4,6 +4,10 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Competence } from "../interface/competence";
 import { InfiniteMovingCards } from "../components/infinite-moving-cards";
+import { CardsGrid } from "../components/cardgrid";
+import competence from "@/pages/api/competence";
+
+export const listeCompPanel: Competence[] = [];
 
 export default function Competences() {
   const [listeCompetence, setListeCompetence] = useState<Competence[]>([]);
@@ -18,6 +22,7 @@ export default function Competences() {
         } else {
           console.error("Received data is not an array:", data);
           setListeCompetence([]);
+          listeCompPanel.push(data);
         }
       } catch (error) {
         console.error("Error fetching competences:", error);
@@ -29,18 +34,17 @@ export default function Competences() {
 
   return (
     <div>
-      <div className="container flex items-center justify-center min-h-screen px-4 mx-auto">
+      <div className="container flex items-center justify-center min-h-screen">
         <InfiniteMovingCards
           items={listeCompetence.map((competence) => ({
             quote: competence.image || "",
             name: competence.name || "",
             title: competence.type || "",
           }))}
-          direction="left"
-          speed="fast"
-          pauseOnHover={true}
-          className="grid w-full grid-cols-1 gap-8 mx-auto mt-32 sm:mt-0 sm:grid-cols-3 lg:gap-16 max-h-[50vh]"
         />
+      </div>
+      <div>
+        <CardsGrid competence={listeCompetence} />
       </div>
     </div>
   );
