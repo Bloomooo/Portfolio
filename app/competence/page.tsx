@@ -37,9 +37,9 @@ export default function Competences() {
             title: competence.type || "",
           }))}
           direction="left"
-          speed="normal"
+          speed="fast"
           pauseOnHover={true}
-          className="grid w-full grid-cols-1 gap-8 mx-auto mt-32 sm:mt-0 sm:grid-cols-3 lg:gap-16"
+          className="grid w-full grid-cols-1 gap-8 mx-auto mt-32 sm:mt-0 sm:grid-cols-3 lg:gap-16 max-h-[50vh]"
         />
       </div>
     </div>
