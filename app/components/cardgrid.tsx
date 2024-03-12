@@ -9,33 +9,42 @@ const Card: React.FC<CardProps> = ({ competence }) => {
   return competence ? (
     <Panel
       bordered
-      className="w-[25vh] h-[15vh] max-w-[25vh] max-h-[25vh] flex flex-col relative"
+      className="flex flex-col relative"
+      style={{
+        width: "17rem",
+        height: "10rem",
+        maxWidth: "100%",
+      }}
     >
-      <div className="flex-grow flex">
+      <div className="flex-grow">
         <img
           src={competence.image}
-          className="max-w-[5vh] max-h-[10vh] object-contain"
+          className="object-contain"
           alt={competence.name}
+          style={{
+            maxHeight: "6rem",
+          }}
         />
       </div>
       <div
         className="absolute top-0 right-0 p-2 text-white"
-        style={{ color: "white", textAlign: "right" }}
+        style={{ textAlign: "right" }}
       >
         {competence.maitrise}
       </div>
       <div
         className="absolute bottom-0 right-0 p-2 text-white"
-        style={{ color: "white", textAlign: "right" }}
+        style={{ textAlign: "right" }}
       >
         {competence.name}
       </div>
     </Panel>
   ) : null;
 };
+
 export const CardsGrid: React.FC<CardsGridProps> = ({ competence }) => {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mx-auto">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
       {competence.map((compe, index) => (
         <Card key={index} competence={compe} />
       ))}
