@@ -30,6 +30,7 @@
     "rehype-pretty-code": "^0.10.1",
     "rehype-slug": "^6.0.0",
     "remark-gfm": "3.0.1",
+    "rsuite": "^5.55.1",
     "tailwind-merge": "^2.2.1",
     "typescript": "^5.2.2"
   },
