@@ -1,6 +1,7 @@
 import { cn } from "../../util/cn";
 import React, { useEffect, useRef } from "react";
 import { InfiniteMovingCardsProps } from "../interface/props";
+import Image from "next/image";
 
 export const InfiniteMovingCards: React.FC<InfiniteMovingCardsProps> = ({
   items,

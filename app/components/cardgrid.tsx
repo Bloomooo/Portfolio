@@ -4,6 +4,7 @@ import { Panel, Row, Col } from "rsuite";
 import "rsuite/dist/rsuite.min.css";
 import { CardProps } from "../interface/cardprops";
 import { CardsGridProps } from "../interface/cardgridprops";
+import Image from "next/image";
 
 const Card: React.FC<CardProps> = ({ competence }) => {
   return competence ? (

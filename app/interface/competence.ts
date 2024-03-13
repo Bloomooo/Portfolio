@@ -1,5 +1,5 @@
 export interface Competence{
-    image?: string;
+    image: string;
     maitrise?: string;
     name: string;
     type?: string;

@@ -12,8 +12,6 @@ const navigation = [
   { name: "Autre", href: "Autre" },
 ];
 
-export const listeCompPanel: Competence[] = [];
-
 export default function Competences() {
   const [listeCompetence, setListeCompetence] = useState<Competence[]>([]);
   const [selectedType, setSelectedType] = useState("Langage");
@@ -28,13 +26,24 @@ export default function Competences() {
         const response = await fetch("/api/competence");
         const data = await response.json();
         data.sort((a: Competence, b: Competence) => {
-          // Sorting logic remains the same
+          if (a.maitrise === "Avancé" && b.maitrise !== "Avancé") {
+            return -1;
+          }
+          if (a.maitrise !== "Avancé" && b.maitrise === "Avancé") {
+            return 1;
+          }
+          if (a.maitrise === "Intermédiaire" && b.maitrise === "Débutant") {
+            return -1;
+          }
+          if (a.maitrise === "Débutant" && b.maitrise === "Intermédiaire") {
+            return 1;
+          }
+          return 0;
         });
         if (Array.isArray(data)) {
           setListeCompetence(data);
         } else {
           setListeCompetence([]);
-          listeCompPanel.push(data);
         }
       } catch (error) {
         console.error("Error fetching competences:", error);
