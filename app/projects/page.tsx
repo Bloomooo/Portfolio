@@ -45,7 +45,8 @@ export default function Projet() {
       let newIndex = listeProjet.findIndex(
         (project) => project.id === prevProjects[0].id
       );
-      newIndex = (newIndex + 1) % listeProjet.length;
+      newIndex = (newIndex + 2) % listeProjet.length;
+
       const newProjects = [];
       for (let i = 0; i < 3; i++) {
         newProjects.push(listeProjet[(newIndex + i) % listeProjet.length]);
