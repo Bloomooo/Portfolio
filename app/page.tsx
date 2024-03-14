@@ -7,27 +7,13 @@ import Contact from "./contact/page";
 import About from "./components/about";
 
 const navigation = [
+  { name: "About", href: "#about" },
   { name: "Projects", href: "#projects" },
   { name: "Competence", href: "#competences" },
   { name: "Contact", href: "#contact" },
 ];
 
 export default function Home() {
-  const [animateAbout, setAnimateAbout] = useState(false);
-  const [showArrow, setShowArrow] = useState(true);
-
-  const handleArrowClick = (e: any) => {
-    e.preventDefault();
-    setAnimateAbout(true);
-    setShowArrow(false);
-    setTimeout(() => {
-      const aboutElement = document.getElementById("about");
-      if (aboutElement) {
-        aboutElement.scrollIntoView({ behavior: "smooth" });
-      }
-    }, 500);
-  };
-
   return (
     <div
       className="flex flex-col items-center justify-center overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black pr-[17px] lg:pr-[17px]"
@@ -79,11 +65,7 @@ export default function Home() {
           <a href="#projects" className="text-zinc-500 hover:text-zinc-300"></a>
         </h2>
       </div>
-      <div id="about" className={animateAbout ? "slide-in" : ""}>
-        <p>
-          <br />
-          <br />
-        </p>
+      <div id="about" className="mt-8">
         <About />
       </div>
       <div id="competences" className="mb-8">
@@ -103,6 +85,9 @@ export default function Home() {
           }
           .slide-in {
             animation: slideIn 0.5s ease forwards;
+          }
+          .mt-8 {
+            margin-top: 30vh; 
           }
           @keyframes slideIn {
             from {
