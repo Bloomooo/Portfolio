@@ -87,7 +87,7 @@ export default function Home() {
             animation: slideIn 0.5s ease forwards;
           }
           .mt-8 {
-            margin-top: 27vh; 
+            margin-top: 28vh; 
           }
           .mb-8{
             margin-top: -30vh;
