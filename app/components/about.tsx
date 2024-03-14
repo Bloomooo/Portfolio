@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <div className="flex justify-between items-center p-6 shadow-lg">
+    <div className="flex justify-between items-center p-6">
       <img
         src="https://media.licdn.com/dms/image/D4E03AQFaWtmEL0epjw/profile-displayphoto-shrink_400_400/0/1698352725233?e=2147483647&v=beta&t=gOybFaJaNUb2ssFeK2N8Yi1xH6K-a2OfwQutMKwkOfg"
         alt="Votre image"

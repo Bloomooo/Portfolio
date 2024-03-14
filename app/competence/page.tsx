@@ -79,6 +79,7 @@ export default function Competences() {
       <div className="container flex items-center justify-center min-h-screen w-full px-4 md:px-0">
         <div className="w-full md:w-[90%]">
           <InfiniteMovingCards
+            className="mb-8"
             items={listeCompetence.map((competence) => ({
               quote: competence.image || "",
               name: competence.name || "",

@@ -68,10 +68,10 @@ export default function Home() {
       <div id="about" className="mt-8">
         <About />
       </div>
-      <div id="competences" className="mb-8">
+      <div id="competences" className="mt-8">
         <Competences />
       </div>
-      <div id="projects" className="mt-0">
+      <div id="projects" className="mb-8">
         <Projet />
       </div>
       <div id="contact">
@@ -87,7 +87,10 @@ export default function Home() {
             animation: slideIn 0.5s ease forwards;
           }
           .mt-8 {
-            margin-top: 30vh; 
+            margin-top: 27vh; 
+          }
+          .mb-8{
+            margin-top: -30vh;
           }
           @keyframes slideIn {
             from {
