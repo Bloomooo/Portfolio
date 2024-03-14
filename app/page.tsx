@@ -1,9 +1,10 @@
-import Link from "next/link";
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Particles from "./components/particles";
 import Projet from "./projects/page";
 import Competences from "./competence/page";
 import Contact from "./contact/page";
+import About from "./components/about";
 
 const navigation = [
   { name: "Projects", href: "#projects" },
@@ -12,6 +13,21 @@ const navigation = [
 ];
 
 export default function Home() {
+  const [animateAbout, setAnimateAbout] = useState(false);
+  const [showArrow, setShowArrow] = useState(true);
+
+  const handleArrowClick = (e: any) => {
+    e.preventDefault();
+    setAnimateAbout(true);
+    setShowArrow(false);
+    setTimeout(() => {
+      const aboutElement = document.getElementById("about");
+      if (aboutElement) {
+        aboutElement.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 500);
+  };
+
   return (
     <div
       className="flex flex-col items-center justify-center overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black pr-[17px] lg:pr-[17px]"
@@ -23,9 +39,9 @@ export default function Home() {
     >
       <nav className="my-16 animate-fade-in">
         <ul className="flex items-center justify-center gap-4">
-          {navigation.map((item) => (
+          {navigation.map((item, index) => (
             <a
-              key={item.href}
+              key={index}
               href={item.href}
               className="text-sm duration-500 text-zinc-500 hover:text-zinc-300"
             >
@@ -52,14 +68,8 @@ export default function Home() {
           Yanis Mechta
         </h1>
         <p className="z-10 text-lg text-white animate-fade-in my-8 text-center">
-          Bienvenue sur mon portfolio ! Je suis passionné par le développement
-          de projets innovants et l&apos;exploration de nouvelles technologies.
-          Mon parcours m&apos;a permis de travailler sur une variété de projets,
-          couvrant le développement web, d&apos;application, et bien
-          d&apos;autres domaines technologiques. Chaque projet est une aventure
-          où je cherche à repousser les limites de ce qui est techniquement
-          possible. Découvrez mes réalisations et voyons ensemble comment nous
-          pouvons transformer vos idées en réalité.
+          Bienvenue sur mon portfolio ! <br />
+          👋
         </p>
       </div>
 
@@ -68,6 +78,13 @@ export default function Home() {
         <h2 className="text-sm text-zinc-500 ">
           <a href="#projects" className="text-zinc-500 hover:text-zinc-300"></a>
         </h2>
+      </div>
+      <div id="about" className={animateAbout ? "slide-in" : ""}>
+        <p>
+          <br />
+          <br />
+        </p>
+        <About />
       </div>
       <div id="competences" className="mb-8">
         <Competences />
@@ -78,10 +95,54 @@ export default function Home() {
       <div id="contact">
         <Contact />
       </div>
+
       <style>
         {`
           ::-webkit-scrollbar {
             display: none;
+          }
+          .slide-in {
+            animation: slideIn 0.5s ease forwards;
+          }
+          @keyframes slideIn {
+            from {
+              transform: translateY(-100%);
+            }
+            to {
+              transform: translateY(0);
+            }
+          }
+
+          // Added animations for the arrow
+          @keyframes pulse {
+            0% {
+              transform: scale(1);
+              opacity: 1;
+            }
+            50% {
+              transform: scale(1.2);
+              opacity: 0.7;
+            }
+            100% {
+              transform: scale(1);
+              opacity: 1;
+            }
+          }
+
+          @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+              transform: translateY(0);
+            }
+            40% {
+              transform: translateY(-30px);
+            }
+            60% {
+              transform: translateY(-15px);
+            }
+          }
+
+          .arrow-animation {
+            animation: pulse 1.5s infinite ease-in-out, bounce 2s infinite;
           }
         `}
       </style>
