@@ -7,7 +7,7 @@ import Contact from "./contact/page";
 import About from "./components/about";
 
 const navigation = [
-  { name: "About", href: "#about" },
+  { name: "About Me", href: "#about" },
   { name: "Projects", href: "#projects" },
   { name: "Competence", href: "#competences" },
   { name: "Contact", href: "#contact" },
