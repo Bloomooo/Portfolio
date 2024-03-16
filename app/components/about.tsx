@@ -4,19 +4,12 @@ export default function About() {
       <h2 className="text-4xl font-extrabold mb-6 text-center text-white">
         Qui suis-je ?
       </h2>
-      <div className="flex justify-between items-center p-6">
-        <img
-          src="https://f.hellowork.com/blogdumoderateur/2022/09/competences-indispensables-developpeur-web.jpg"
-          alt="Votre image"
-          className="w-1/3 h-auto rounded-lg shadow-lg mr-8"
-        />
-
-        <div>
+      <div className="flex flex-col md:flex-row justify-between items-center p-6">
+        <div className="w-full md:w-1/2">
           <p className="text-white text-lg leading-relaxed">
-            <br />
             Je suis un étudiant de 19 ans passionné par le développement
             informatique, les jeux vidéos, les mangas et les animes actuellement
-            inscrit en première année de BUT Informatique à l&apos;IUT Lyon 1
+            inscrit en deuxième année de BUT Informatique à l&apos;IUT Lyon 1
             Claude Bernard. Résidant à Annecy et Lyon, en France, j&apos;ai
             toujours été fasciné par la manière dont les ordinateurs et les
             logiciels peuvent transformer notre façon de vivre et de travailler.
@@ -28,11 +21,15 @@ export default function About() {
             de nouvelles technologies.
           </p>
         </div>
+        <img
+          src="https://f.hellowork.com/blogdumoderateur/2022/09/competences-indispensables-developpeur-web.jpg"
+          alt="Votre image"
+          className="w-full md:w-1/3 h-auto rounded-lg shadow-lg md:mb-8 md:mr-8"
+        />
       </div>
-      <div className="flex justify-between items-center p-6">
-        <div>
+      <div className="flex flex-col md:flex-row justify-between items-center p-6">
+        <div className="w-full md:w-1/2 md:order-2">
           <p className="text-white text-lg leading-relaxed">
-            <br />
             Ce qui me passionne le plus dans le développement informatique,
             c&apos;est la possibilité de créer des solutions innovantes qui
             peuvent résoudre des problèmes du monde réel. J&apos;aime relever
@@ -56,7 +53,7 @@ export default function About() {
         <img
           src="https://jai-un-pote-dans-la.com/wp-content/uploads/2022/10/jupdlc-developpeur-2023-multimedia2.jpeg"
           alt="Votre image"
-          className="w-1/3 h-auto rounded-lg shadow-lg ml-8"
+          className="w-full md:w-1/3 h-auto rounded-lg shadow-lg md:mb-8 md:ml-8 md:order-1"
         />
       </div>
     </div>
