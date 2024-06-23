@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { Competence } from "../interface/competence";
 import { InfiniteMovingCards } from "../components/infinite-moving-cards";
 import { CardsGrid } from "../components/cardgrid";
+import { BentoGridThirdDemo } from "../components/competenceiut";
 
 const navigation = [
   { name: "Langage", href: "Langage" },

@@ -5,6 +5,7 @@ import Projet from "./projects/page";
 import Competences from "./competence/page";
 import Contact from "./contact/page";
 import About from "./components/about";
+import { BentoGridThirdDemo } from "./components/competenceiut";
 
 const navigation = [
   { name: "About Me", href: "#about" },
@@ -69,8 +70,12 @@ export default function Home() {
         <About />
       </div>
       <div id="competences" className="mt-8">
+        <BentoGridThirdDemo />
+      </div>
+      <div id="competences" className="mt-8">
         <Competences />
       </div>
+
       <div id="projects" className="mb-8">
         <Projet />
       </div>
