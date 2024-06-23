@@ -9,7 +9,6 @@ import { motion } from "framer-motion";
 import { BentoGrid, BentoGridItem } from "./iut";
 import { cn } from "@/util/cn";
 
-// Define Skeleton components for placeholders
 const SkeletonOne = () => (
   <motion.div
     initial="initial"
@@ -144,6 +143,15 @@ const DetailsOne = () => (
           de supports (embarqué, web, mobile, IoT…)
         </li>
       </ul>
+      <p>
+        Pourquoi je pense avoir ce niveau : J&apos;ai acquis ce niveau en
+        réalisant plusieurs projets de développement d&apos;applications pour
+        divers clients et utilisateurs. J&apos;ai suivi un processus rigoureux
+        incluant la conception, le codage, les tests et l&apos;intégration de
+        solutions informatiques. J&apos;ai également été capable de communiquer
+        efficacement avec les parties prenantes pour m&apos;assurer que les
+        besoins étaient respectés.
+      </p>
     </div>
     <div>
       <h2 className="text-xl font-semibold mb-2">Justification</h2>
@@ -155,6 +163,14 @@ const DetailsOne = () => (
         CoursesPhp <br />
         SAE - Annuaire en C <br />
         SAE Clicker
+      </p>
+      <p>
+        Ce que cela m&apos;a apporté : Ce niveau m&apos;a permis de développer
+        des compétences avancées en programmation et en gestion de projet.
+        J&apos;ai appris à appliquer des principes algorithmiques et à
+        documenter efficacement mon code. J&apos;ai également compris
+        l&apos;importance de la qualité du code et de la satisfaction client
+        dans le développement d&apos;applications.
       </p>
     </div>
   </div>
@@ -200,6 +216,14 @@ const DetailsTwo = () => (
           <strong>Niveau 3 :</strong> Analyser et optimiser des applications
         </li>
       </ul>
+      <p>
+        Pourquoi je pense avoir ce niveau : J&apos;ai atteint ce niveau en
+        optimisant des applications existantes pour améliorer leur temps
+        d&apos;exécution, leur précision et leur efficacité en termes de
+        ressources. J&apos;ai utilisé des modèles de raisonnement structurés
+        pour choisir et implémenter les algorithmes les plus adaptés à chaque
+        problème spécifique.
+      </p>
     </div>
     <div>
       <h2 className="text-xl font-semibold mb-2">Justification</h2>
@@ -209,6 +233,13 @@ const DetailsTwo = () => (
         Projet - CoursesPhp
         <br />
         SAE - Comparaison algorithmique en python
+      </p>
+      <p>
+        Ce que cela m&apos;a apporté : Cette compétence m&apos;a permis
+        d&apos;approfondir mes connaissances en algorithmique et en structures
+        de données. J&apos;ai appris à identifier et résoudre des problèmes
+        complexes tout en maintenant les standards de qualité élevés attendus
+        dans le domaine du développement logiciel.
       </p>
     </div>
   </div>
@@ -251,6 +282,13 @@ const DetailsThree = () => (
           en fonction des besoins métiers des clients et des utilisateurs
         </li>
       </ul>
+      <p>
+        Pourquoi je pense avoir ce niveau : J&apos;ai développé ce niveau en
+        menant plusieurs projets informatiques, en utilisant à la fois des
+        méthodes classiques et agiles. J&apos;ai identifié les besoins des
+        clients et des utilisateurs, organisé les ressources nécessaires et
+        assuré le suivi du projet tout au long de son cycle de vie.
+      </p>
     </div>
     <div>
       <h2 className="text-xl font-semibold mb-2">Justification</h2>
@@ -264,6 +302,13 @@ const DetailsThree = () => (
         Projet - CoursesPhp
         <br />
         SAE Clicker
+      </p>
+      <p>
+        Ce que cela m&apos;a apporté : La conduite de projet m&apos;a permis de
+        développer des compétences en gestion de projet et en communication
+        interpersonnelle. J&apos;ai appris à naviguer efficacement dans les
+        dynamiques d&apos;équipe et à respecter les contraintes légales et
+        réglementaires tout en maintenant un focus sur la satisfaction client.
       </p>
     </div>
   </div>
@@ -309,6 +354,14 @@ const DetailsFour = () => (
           <strong>Niveau 3 :</strong> Manager une équipe informatique
         </li>
       </ul>
+      <p>
+        Pourquoi je pense avoir ce niveau : J&apos;ai acquis ce niveau en
+        collaborant étroitement avec des équipes pluridisciplinaires dans
+        différents contextes informatiques. J&apos;ai contribué à
+        l&apos;évolution des solutions informatiques tout en respectant les
+        contraintes réglementaires et en développant une communication
+        collaborative et efficace.
+      </p>
     </div>
     <div>
       <h2 className="text-xl font-semibold mb-2">Justification</h2>
@@ -322,6 +375,13 @@ const DetailsFour = () => (
         Projet - CoursesPhp
         <br />
         SAE Clicker
+      </p>
+      <p>
+        Ce que cela m&apos;a apporté : Travailler dans une équipe m&apos;a
+        permis de développer mes compétences en leadership et en gestion de
+        conflits. J&apos;ai appris à identifier mes aptitudes personnelles au
+        sein d&apos;une équipe et à les mettre à profit pour atteindre des
+        objectifs communs dans des environnements variés.
       </p>
     </div>
   </div>
@@ -367,6 +427,14 @@ const DetailsFive = () => (
           <strong>Niveau 3 :</strong> Maintenir la performance des systèmes
         </li>
       </ul>
+      <p>
+        Pourquoi je pense avoir ce niveau : J&apos;ai atteint ce niveau en
+        administrant des systèmes informatiques complexes, en assurant leur
+        installation, configuration, maintenance et sécurisation. J&apos;ai
+        utilisé mes connaissances approfondies de l&apos;architecture des
+        systèmes et des réseaux pour optimiser les performances tout en
+        respectant les normes et obligations légales.
+      </p>
     </div>
     <div>
       <h2 className="text-xl font-semibold mb-2">Justification</h2>
@@ -382,6 +450,13 @@ const DetailsFive = () => (
         SAE Clicker
       </p>
     </div>
+    <p>
+      Ce que cela m&apos;a apporté : Cette compétence m&apos;a permis de devenir
+      un administrateur système compétent, capable de gérer des infrastructures
+      critiques avec efficacité et fiabilité. J&apos;ai appris à résoudre des
+      incidents complexes et à maintenir la disponibilité et la sécurité des
+      systèmes informatiques dans des environnements exigeants.
+    </p>
   </div>
 );
 
@@ -425,6 +500,13 @@ const DetailsSix = () => (
           informatiques
         </li>
       </ul>
+      <p>
+        Pourquoi je pense avoir ce niveau : J&apos;ai développé ce niveau en
+        surveillant activement les évolutions technologiques pertinentes pour
+        mon domaine. J&apos;ai analysé leur impact potentiel, conseillé et
+        informé mes collègues et décideurs sur les innovations informatiques
+        stratégiques pour notre organisation.
+      </p>
     </div>
     <div>
       <h2 className="text-xl font-semibold mb-2">Justification</h2>
@@ -438,6 +520,14 @@ const DetailsSix = () => (
         Projet - CoursesPhp
         <br />
         SAE Clicker
+      </p>
+      <p>
+        Ce que cela m&apos;a apporté : La veille technologique m&apos;a permis
+        de rester à jour avec les nouvelles technologies et les tendances
+        émergentes. J&apos;ai développé une capacité critique à évaluer ces
+        technologies et à les intégrer de manière appropriée pour répondre aux
+        besoins organisationnels tout en maintenant une posture proactive dans
+        mon domaine d&apos;expertise.
       </p>
     </div>
   </div>
@@ -511,14 +601,12 @@ const items: Item[] = [
     details: <DetailsSix />,
   },
 ];
-
-// Main component BentoGridThirdDemo
 export function BentoGridThirdDemo() {
   const [activeItem, setActiveItem] = useState<number | null>(null);
 
   const handleClick = (id: number) => {
     console.log("clicked", id);
-    setActiveItem(id === activeItem ? null : id); // Toggle activeItem
+    setActiveItem(id === activeItem ? null : id);
   };
 
   return (
