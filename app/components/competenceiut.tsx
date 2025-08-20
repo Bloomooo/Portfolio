@@ -156,7 +156,11 @@ const DetailsOne = () => (
     <div>
       <h2 className="text-xl font-semibold mb-2">Justification</h2>
       <p>
-        Stage - Isitec International
+          Alternance - Isitec International
+          <br />
+          CDD - Isitec International
+          <br />
+          Stage - Isitec International
         <br />
         SAE - Java et Graphe Projet
         <br />
@@ -228,7 +232,11 @@ const DetailsTwo = () => (
     <div>
       <h2 className="text-xl font-semibold mb-2">Justification</h2>
       <p>
-        Stage - Isitec International
+        Alternance - Isitec International
+          <br />
+          CDD - Isitec International
+          <br />
+          Stage - Isitec International
         <br />
         Projet - CoursesPhp
         <br />
@@ -293,7 +301,11 @@ const DetailsThree = () => (
     <div>
       <h2 className="text-xl font-semibold mb-2">Justification</h2>
       <p>
-        Stage - Isitec International
+        Alternance - Isitec International
+          <br />
+          CDD - Isitec International
+          <br />
+          Stage - Isitec International
         <br />
         SAE - Poster
         <br />
@@ -366,7 +378,11 @@ const DetailsFour = () => (
     <div>
       <h2 className="text-xl font-semibold mb-2">Justification</h2>
       <p>
-        Stage - Isitec International
+        Alternance - Isitec International
+          <br />
+          CDD - Isitec International
+          <br />
+          Stage - Isitec International
         <br />
         SAE - Poster
         <br />
@@ -439,7 +455,11 @@ const DetailsFive = () => (
     <div>
       <h2 className="text-xl font-semibold mb-2">Justification</h2>
       <p>
-        Stage - Isitec International
+        Alternance - Isitec International
+          <br />
+          CDD - Isitec International
+          <br />
+          Stage - Isitec International
         <br />
         SAE - Poster
         <br />
@@ -511,7 +531,11 @@ const DetailsSix = () => (
     <div>
       <h2 className="text-xl font-semibold mb-2">Justification</h2>
       <p>
-        Stage - Isitec International
+        Alternance - Isitec International
+          <br />
+          CDD - Isitec International
+          <br />
+          Stage - Isitec International
         <br />
         SAE - Poster
         <br />

@@ -6,11 +6,13 @@ import Competences from "./competence/page";
 import Contact from "./contact/page";
 import About from "./components/about";
 import { BentoGridThirdDemo } from "./components/competenceiut";
+import Experience from "@/app/experience/experience";
 
 const navigation = [
-  { name: "About Me", href: "#about" },
+    { name: "Compétence IUT", href: "#compIUT" },
+  { name: "Experience", href: "#experience" },
+    { name: "Competence", href: "#competences" },
   { name: "Projects", href: "#projects" },
-  { name: "Competence", href: "#competences" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -66,12 +68,12 @@ export default function Home() {
           <a href="#projects" className="text-zinc-500 hover:text-zinc-300"></a>
         </h2>
       </div>
-      <div id="about" className="mt-8">
-        <About />
-      </div>
-      <div id="competences" className="mt-8">
+      <div id="compIUT" className="mt-8">
         <BentoGridThirdDemo />
       </div>
+        <div id="experience" className="mt-8">
+            <Experience />
+        </div>
       <div id="competences" className="mt-8">
         <Competences />
       </div>
